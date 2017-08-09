@@ -1,4 +1,6 @@
 #!/bin/bash
+#changes dstat file to look at the CPU usage making it easier to plot 
+#run using: ./fix_cpu ${your_network}
 
 declare -a networks=( alexnet googlenet inception-bn inception-v3 resnet-50 resnet-152 vgg)
 declare -a gpus=( p100 p40 m40 m60 k40m k80 )
@@ -20,7 +22,3 @@ do
  cd ../
 done 
 cd ../
-
-#grep -v system $1 > tmp_2.csv
-#sed '1!{/^time/d;}' tmp_2.csv > tmp_3.csv
-#grep 'train_imagenet.py\|system\|time\|' tmp_3.csv > tmp_4.csv
