@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# gets rid of all 0% on gpu memory usage
+# run using: ./fix_gpu_mem.sh ${your_network}
 
 declare -a gpus=( p100 p40 m40 m60 k40m k80 )
 declare -a batch_size=( 1 2 4 8 16 32 64 128 256 )

@@ -1,5 +1,11 @@
 #!/bin/bash
-
+"""
+This script is for runnning/getting training data using the MXNET Framework. It goes through every network, and will create a directory for each network. Then it will go into that network's directory and create a directory for each batch size. In every batch's directory, there will be 3 different files for each gpu: 
+*example names
+1. A training log: p100_alexnet.txt
+2. A log of dstat:  dstat_p100_alexnet.csv
+3. A log of nvidia-smi: nvidia-smi-p100_alexnet.csv
+"""
 
 declare -a networks=( alexnet googlenet )
 declare -A gpumap=([0]=p100 [1,2]=k80 [3,4]=m60 [5]=m40 [6]=k40m [7]=p40)
